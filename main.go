@@ -7,3 +7,6 @@ import(
 func main(){
 	fmt.Println("Helllo, world")
 }
+ func reduce (){
+	
+ }
