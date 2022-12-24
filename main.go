@@ -18,3 +18,21 @@ func init(){
 
 	flag.StringVar(&sourceText, "st", "", " text To Translate")
 }
+
+func main(){
+	flag.Parse()
+
+	if flag.NFlag() == 0 {
+		fmt.Println("Options:")
+		flag.PrintDefaults()
+		os.Exit(1)
+	}
+
+	reqBody := &cli.RequestBody{
+		SourceLang : sourceLang,
+		targetLang: targetLang,
+		sourceText: sourceText,
+	}
+
+	cli.RequestTranslate(reqBody)
+}
