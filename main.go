@@ -29,9 +29,9 @@ func main(){
 	}
 
 	reqBody := &cli.RequestBody{
-		SourceLang : sourceLang,
-		targetLang: targetLang,
-		sourceText: sourceText,
+		SourceLang: sourceLang,
+		TargetLang: targetLang,
+		SourceText: sourceText,
 	}
 
 	cli.RequestTranslate(reqBody)
