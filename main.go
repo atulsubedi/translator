@@ -7,6 +7,9 @@ import(
 	"sync"
 	"os"
 )
+
+var wg sync.WaitGroup
+
 var sourceLang string
 var targetLang string
 var sourceText string
