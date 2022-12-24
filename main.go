@@ -31,11 +31,13 @@ func main(){
 		os.Exit(1)
 	}
 
+	strChan := make(chan string)
+
 	reqBody := &cli.RequestBody{
 		SourceLang: sourceLang,
 		TargetLang: targetLang,
 		SourceText: sourceText,
 	}
-
-	cli.RequestTranslate(reqBody)
+// go key word infront of a function indicates that it start a new process using routines
+    go cli.RequestTranslate(reqBody)
 }
